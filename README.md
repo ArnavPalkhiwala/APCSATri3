@@ -1,28 +1,18 @@
-## TBD [Spring Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Spring%20Portfolio%20Starter)
-Runtime link: TBD https://jportfolio.nighthawkcodingsociety.com/
+## The Weasels 🐿 (Period 2)
 
 
+#### TimeBox with Team Roles Described
 
-## Visual thoughts
-#### * Starter code should be fun and practical
-#### * Organize with Bootstrap menu 
-#### * Add some color and fun through VANTA Visuals (birds, halo, solar, net)
-#### * Show some practical and fun links (hrefs) like Twitter, Git, Youtube
-#### * Show student project specific links (hrefs) per page
-#### * Show student TPT ideas
-#### * Show student About me pages
+| Name             | Github Username | Github Profile                                         | Role               | Links                                                                                                                                                                                                                                                                                                  | Individual                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ---------------- | --------------- | ------------------------------------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ArnavPalkhiwala  | ArnavPalkhiwala      | [@ArnavPalkhiwala](https://github.com/ArnavPalkhiwala)           | Scrum Master: Ensure roles are assigned. Build Scrum Board and keep it updated week to week.        |  |
+| Aman Jain    | amanjain31      | [@amanjain31](https://github.com/amanjain31)           | Primary Designer. Primary Designer and Layout manager. Organize Thymeleaf Enabled Templates, ensure usage of Bootstrap (minimize CSS customization per page). Establish plan for overrides on each of the User Pages.           | | 
+| Chris Duroiu | ChristopherDuroiu | [@ChristopherDuroiu](https://github.com/ChristopherDuroiu) | Technical Officer faor Scrum Team. Works with Teacher, Classroom TOs, and BOF TO's to form TPT lessons and Tech Talk Topics for Trimester. Also, facilitates learning of Technical Concepts within Scrum Team.      | |
+| Raquib Alam  | ChiefGuap     | [@ChiefGuap](https://github.com/ChiefGuap)         | Deployment Manager (RPi or AWS). Deploy Web site. Establish policy and frequency for updates. Ensure site is not broken and always alive for reviews. |                                                                                                                   
+## Project Description/Ideas/Success Ideas
+* Project Owner Described: Our work is sponsored by Coding4Kidz (a DNHS club that teaches local elementary school students how to code)
+* This website will contain a calendar with dates for teaching sessions, small coding tutorials/youtube videos to clarify content in class, as well as contact and sign-up forms that allow parents to easily register for classes.  
+* We plan to use Databases to keep track of the students registered and sign-ups and a sleek front end design will be made with bootstrap
+* Figma will be used as a wireframe and is linked [here](https://www.figma.com/file/ZlMdwXET7GXIKG1iqHcoZN/AP-CSA-Tri-3-Coding4Kidz?node-id=0%3A1)
 
-
-
-## Getting started
-#### * Clone project to IntelliJ
-#### * Verify Project Structure to use a good Java JDK (adopt-openJ9-15) 
-#### * Play or entry point is Main.java, look for play option in tray.  This file eanbles Spring to load
-#### * Java source (src/main/java) had Java files.  Find "controllers" path, these files enable HTTP route and HTML file relationship.  Note, html 
-#### * HTML source (src/main/resources) had templates and supporting files.  Find index.html as this file is launched by defaul in Spring.  Other HTML files are loaded by building a "@Controller"
-
-
-
-## IDE management
-#### * A ".gitignore" can teach a Developer a lot about Java runtime.  A target directory is created when you press play button, byte code is generated and files are moved into this location.
-#### * A "pom.xml" file can teach you a lot about Java dependencies.  This is similar to "requirements.txt" file in Python.  It manages packages and dependencies.
+#### [Scrumboard Link](https://github.com/amanj31/AP-CSA-T3/projects/1?add_cards_query=is%3Aopen)
