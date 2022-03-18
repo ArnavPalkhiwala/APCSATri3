@@ -1,4 +1,4 @@
-# P1-DataPirates RPI DEPLOYMENT GUIDE
+# P2-Weasles DEPLOYMENT GUIDE
 
 ***
 
