@@ -4,16 +4,17 @@
 ## TimeBox with Team Roles Described
 
 ### ArnavPalkhiwala 
-([@ArnavPalkhiwala](https://github.com/ArnavPalkhiwala)): Scrum Master: Ensure roles are assigned. Build Scrum Board and keep it updated week to week. Also keep members on track with their roles. Helping with technical officer's feature development and also front end design and wireframe done through Figma. Some previous project Arnav has worked on are []() and [](). Arnav's main areas of expertise are 
+([@ArnavPalkhiwala](https://github.com/ArnavPalkhiwala)): Scrum Master: Ensure roles are assigned. Build Scrum Board and keep it updated week to week. Also keep members on track with their roles. Helping with technical officer's feature development and also front end design and wireframe done through Figma. Some previous project Arnav has worked on are [Spotistats](https://github.com/raad1masum/SpotiStats) and [DNHS NEST](https://github.com/rpeddakama/DNHS-Nest). Arnav's main areas of expertise are design and technicals as well with html, java, etc. [Github Pages Link](https://arnavpalkhiwala.github.io/APCSA-Tri3-Individual/)
 
 ### Aman Jain 
-([@amanjain31](https://github.com/amanjain31)): Primary Designer. Primary Designer and Layout manager. Organize Thymeleaf Enabled Templates, ensure usage of Bootstrap (minimize CSS customization per page). Establish plan for overrides on each of the User Pages. Some previous projects Aman has worked on are [Spotistats](https://github.com/raad1masum/SpotiStats) and [DNHS Lunchline](https://github.com/ashwinbabu888/AP-CSA-T2). Aman's main areas of expertise are backend java coding and deployment.
+([@amanj31](https://github.com/amanjain31)): Primary Designer. Primary Designer and Layout manager. Organize Thymeleaf Enabled Templates, ensure usage of Bootstrap (minimize CSS customization per page). Establish plan for overrides on each of the User Pages. Some previous projects Aman has worked on are [Spotistats](https://github.com/raad1masum/SpotiStats) and [DNHS Lunchline](https://github.com/ashwinbabu888/AP-CSA-T2). Aman's main areas of expertise are backend java coding and deployment. [Github Pages Link](https://amanj31.github.io/Aman-T3-indiv/)
 
 ### Chris Duroiu 
-([@ChristopherDuroiu](https://github.com/ChristopherDuroiu)): Technical Officer faor Scrum Team. Works with Teacher, Classroom TOs, and BOF TO's to form TPT lessons and Tech Talk Topics for Trimester. Also, facilitates learning of Technical Concepts within Scrum Team. Some previous project Chris has worked on are []() and [](). Chris's main areas of expertise are 
+([@ChristopherDuroiu](https://github.com/ChristopherDuroiu)): Technical Officer faor Scrum Team. Works with Teacher, Classroom TOs, and BOF TO's to form TPT lessons and Tech Talk Topics for Trimester. Also, facilitates learning of Technical Concepts within Scrum Team. Some previous project Chris has worked on are []() and [](). Chris's main areas of expertise are . [Github Pages Link](https://christopherduroiu.github.io/DataStructures2Tri3/)
 
 ### Raquib Alam 
-([@ChiefGuap](https://github.com/ChiefGuap)): Deployment Manager (RPi or AWS). Deploy Web site. Establish policy and frequency for updates. Ensure site is not broken and always alive for reviews. Some previous project Raquib has worked on are []() and [](). Raquib's main areas of expertise are
+([@ChiefGuap](https://github.com/ChiefGuap)): Deployment Manager (RPi or AWS). Deploy Web site. Establish policy and frequency for updates. Ensure site is not broken and always alive for reviews. Some previous project Raquib has worked on are []() and [](). Raquib's main areas of expertise are . [Github Pages Link](https://chiefguap.github.io/Trimester3DataScurtures/)
+
 
 
 ## Project Description/Ideas/Success Ideas
