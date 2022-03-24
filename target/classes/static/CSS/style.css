@@ -1,10 +1,12 @@
+@import url(//db.onlinewebfonts.com/c/6a9c6944fe8451dd397fe9d0763a4c88?family=OCR+A+Std);
+
 body{
     background-color: #2a2a2a;
 }
 
 h1{
     color: white;
-    font-family: 'OCR A Std', sans-serif;
+    font-family: 'OCR A Std', monospace;
 }
 
 h3{

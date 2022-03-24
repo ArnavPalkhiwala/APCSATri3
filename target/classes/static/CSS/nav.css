@@ -1,3 +1,18 @@
+@import url(//db.onlinewebfonts.com/c/6a9c6944fe8451dd397fe9d0763a4c88?family=OCR+A+Std);
+
 body{
+    background-color: pink;
+}
+
+a{
+    font-family: 'OCR A Std', monospace;
+}
+
+li{
+    font-family: 'OCR A Std', monospace;
+}
+
+nav{
+    font-family: 'OCR A Std', monospace;
     background-color: pink;
 }
