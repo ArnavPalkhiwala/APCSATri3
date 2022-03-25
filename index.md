@@ -1,7 +1,9 @@
 # The Weasels (Period 2)
 
 
-## TimeBox with Team Roles Described
+## TimeBox with Team Roles Described 
+
+[Review Ticket Linked Here](https://github.com/ArnavPalkhiwala/APCSATri3/issues/7)
 
 ### ArnavPalkhiwala 
 ([@ArnavPalkhiwala](https://github.com/ArnavPalkhiwala)): Scrum Master: Ensure roles are assigned. Build Scrum Board and keep it updated week to week. Also keep members on track with their roles. Helping with technical officer's feature development and also front end design and wireframe done through Figma. Some previous project Arnav has worked on are [Spotistats](https://github.com/raad1masum/SpotiStats) and [DNHS NEST](https://github.com/rpeddakama/DNHS-Nest). Arnav's main areas of expertise are design and technicals as well with html, java, etc. [Github Pages Link](https://arnavpalkhiwala.github.io/APCSA-Tri3-Individual/)
@@ -25,4 +27,3 @@
 
 ### [Scrumboard Link](https://github.com/amanj31/AP-CSA-T3/projects/1?add_cards_query=is%3Aopen)
 
-[Review Ticket Linked Here](https://github.com/ArnavPalkhiwala/APCSATri3/issues/5)
