@@ -1,4 +1,3 @@
-# Team Master Plan
 
 - Project Owner Described: Our work is sponsored by Coding4Kidz (a DNHS club that teaches local elementary school students how to code)
 - This website will contain a calendar with dates for teaching sessions, small coding tutorials/youtube videos to clarify content in class, as well as contact and sign-up forms that allow parents to easily register for classes.
