@@ -5,8 +5,9 @@ body{
 }
 
 h1{
+    text-align: center;
     color: white;
-    font-family: 'OCR A Std', monospace;
+    font-family:'Courier New', Courier, monospace, monospace;
 }
 
 h3{
