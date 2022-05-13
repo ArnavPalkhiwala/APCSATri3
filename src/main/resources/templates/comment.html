@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head> <div style=" text-align:center" layout:fragment="metadata" th:remove="tag">
+  <style>
+    form {
+      margin-top: 80px;
+    }
+  </style>
+  <!-- Start of head content specific to page -->
+  <title>Greet</title>
+  <!-- End of head content specific to page -->
+</div>
+
+</head>
+<body><div  layout:fragment="content" th:remove="tag">
+  <!-- Start of body content specific to page -->
+  <div class="contact" style="height: 35vh;">
+    <div class="row justify-content-left">
+      <form action="/comment" method="GET" id="greetForm">
+        <div>
+          <label for="greetField">Username</label>
+          <input name="username" id="greetField">
+          <div></div>
+          <label for="greetField1">Feedback</label>
+          <input name="comment" id="greetField1">
+          <button>CLICK ME</button>
+
+          <table class="table">
+            <thead>
+            <tr>
+              <th>User Name</th>
+              <th>Date</th>
+              <th>Feedback</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="x: ${luc}">
+              <td>
+                <p th:text="@{${x.GetUsername()}}"></p>
+              </td>
+              <td>
+                <p th:text="@{${x.GetDate()}}"></p>
+              </td>
+              <td>
+                <p th:text="@{${x.GetComment()}}"></p>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- End of body content specific to page -->
+</div></body>
+
+</html>
