@@ -12,13 +12,25 @@
 </div></head>
 
 <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
-<body><div layout:fragment="content" th:remove="tag">
+<body>
+
+<div layout:fragment="content" th:remove="tag">
     <!-- Start of body content specific to page -->
-    <br/>
-    <h1>Welcome to Coding4Kidz</h1>
-    <div id="spring_intro" class="articles" style="margin: 30px;">
-       
-    </div>
+    <h2>Send e-mail to codingkids20@gmail.com:</h2>
+
+    <form action="mailto:codingkids20@gmail.com" method="post" enctype="text/plain">
+        Name:<br>
+        <input type="text" name="name"><br>
+        E-mail:<br>
+        <input type="text" name="mail"><br>
+        Comment:<br>
+        <input type="text" name="comment" size="50"><br><br>
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+    </form>
+
+
+</div>
     <!-- End of body content specific to page -->
 </div></body>
 
