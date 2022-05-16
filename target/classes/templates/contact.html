@@ -14,8 +14,9 @@
 <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
 <body>
 
-<div layout:fragment="content" th:remove="tag">
+<div layout:fragment="content" th:remove="tag" >
     <!-- Start of body content specific to page -->
+    <div style="text-align:center">
     <h2>Send e-mail to codingkids20@gmail.com:</h2>
 
     <form action="mailto:codingkids20@gmail.com" method="post" enctype="text/plain">
@@ -28,7 +29,7 @@
         <input type="submit" value="Send">
         <input type="reset" value="Reset">
     </form>
-
+    </div>
 
 </div>
     <!-- End of body content specific to page -->
