@@ -30,13 +30,22 @@ public class Comment {
 
         uc.ChangeComment("time");
 
+        String prevUsername = "";
         luc.add(uc);
 
-        //model.addAttribute("nameout", uc.GetUsername()); // MODEL is passed to html
-        //model.addAttribute("commentout", uc.GetComment()); // MODEL is passed to html
-        //model.addAttribute("dateout", uc.GetDate()); // MODEL is passed to html
+        if(!(uc.GetUsername().equals(prevUsername))){
+            if(!uc.GetComment().equals("[your comment here]") && !uc.GetUsername().equals("First last")){
+                model.addAttribute("nameout", uc.GetUsername()); 
+                model.addAttribute("commentout", uc.GetComment()); 
+                model.addAttribute("dateout", uc.GetDate()); 
+            }
+        
+        }
+       
 
         model.addAttribute("luc", luc);
+
+        prevUsername = uc.GetUsername();
 
         return "comment"; // returns HTML VIEW (greeting)
     }

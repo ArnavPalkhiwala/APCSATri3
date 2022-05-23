@@ -20,13 +20,18 @@
     <div class="row justify-content-left">
       <form action="/comment" method="GET" id="greetForm">
         <div>
-          <p> Help us Improve the Website!</p>
           <label for="greetField">Username</label>
           <input name="username" id="greetField">
           <div></div>
           <label for="greetField1">Feedback</label>
           <input name="comment" id="greetField1">
-          <button>CLICK ME</button>
+          <button onclick="myFunction()" >CLICK ME</button>
+          <script>
+            function myFunction() {
+              window.location.href="http://localhost:8080/comment";  
+            }
+          </script>
+
 
           <table class="table">
             <thead>
