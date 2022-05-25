@@ -14,7 +14,6 @@ import java.util.List;
 
 @Controller // HTTP requests are handled as a controller, using the @Controller annotation
 public class Comment {
-
     List<UserComment> luc = new ArrayList<>();
 
     @GetMapping("/comment")
@@ -22,7 +21,7 @@ public class Comment {
     // variable bindings
     public String greeting(
             @RequestParam(name = "username", required = false, defaultValue = "No Username given") String username,
-            @RequestParam(name = "comment", required = false, defaultValue = "No comment given") String comment,
+            @RequestParam(name = "comment", required = false, defaultValue = "No Comment given") String comment,
             Model model) {
         // @RequestParam handles required and default values, name and model are class
         // variables, model looking like JSON
@@ -35,15 +34,15 @@ public class Comment {
         luc.add(uc);
 
         if (!(uc.GetUsername().equals(prevUsername))) {
-            if (!uc.GetComment().equals("No Username given") && !uc.GetUsername().equals("No Comment given")) {
+            if (!uc.username.equals("No Username given") && !uc.comment.equals("No Comment given")) {
                 model.addAttribute("nameout", uc.GetUsername());
                 model.addAttribute("commentout", uc.GetComment());
                 model.addAttribute("dateout", uc.GetDate());
-            }
+                model.addAttribute("luc", luc);
 
+            }
         }
 
-        model.addAttribute("luc", luc);
 
         prevUsername = uc.GetUsername();
 
