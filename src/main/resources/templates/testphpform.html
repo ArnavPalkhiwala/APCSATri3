@@ -1,0 +1,210 @@
+<?php
+if(isset($_POST["submit"])) {
+$recipient = "brentw.white@gmail.com"; //my email
+echo $subject = 'Email message from Point Plumbing';
+echo $name = $_POST ["yourName"];
+echo $email = $_POST["yourEmail"];
+echo $phone = $_POST["yourPhone"];
+echo $location = $_POST["yourLocate"];
+echo  $message = $_POST["yourMessage"];
+
+ $mailBody="Name: $name\nEmail: $email\n\n$message"; 
+
+ mail($recipient, $subject, $mailBody);
+
+
+}
+?>
+
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Test PHP</title>
+      
+    <link rel="stylesheet" href="/css/style.css">
+
+</div></head>
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body>
+   <div layout:fragment="content" th:remove="tag" >
+
+      <form action="" method="post" id="spaceing" data-abide>
+         <div class="form-bg">
+             <div class="row">
+                 <div id="name" class="large-6 medium-6 small-12 columns">
+                     <label> <h5>Name</h5>
+                         <input type="text" name="yourName" placeholder="What is you're name?"></input>
+                     </label>
+                 </div>
+ 
+                 <div id="email" class="large-6 medium-6 small-12 columns">
+                     <label><h5>Email</h5>
+                         <input type="email" name="yourEmail" placeholder="Please enter in you're email."required></input>
+                     </label>
+                     <small class="error">An email Address is required.</small>
+                 </div>
+             </div>
+ 
+                 <div class="row">
+                     <div id="phone"class="large-6 medium-6 small-12 columns">
+                         <label><h5>Phone</h5>
+                             <input type="text" name="yourPhone" placeholder="Please enter you're phone number."></input>
+                         </label>
+                     </div>
+ 
+                     <div id="location" class="large-6 medium-6 small-12 columns">
+                         <label><h5>Location</h5>
+                             <input type="text" name="yourLocate" placeholder="Where on Oahu are you currently living?"></input>
+                         </label>
+                     </div>
+                 </div>
+ 
+                 <div class="row">
+                     <div id="message-area" class="large-12 medium-12 small-12 columns">
+                         <label><h5>Message</h5>
+                             <textarea id="message" name="yourMessage" placeholder="Please tell us about you're plumbing issues."></textarea>
+                         </label>
+                     </div>
+                 </div>
+ 
+             <div class="row">
+                 <div id="submit" class="large-3 medium-3 small-3 columns">
+                     <button name="submit" type="submit">Submit</button>
+                 </div>
+             </div>
+         </div>
+     </form>
+</div>
+
+
+
+<!-- <?php
+         // define variables and set to empty values
+         $nameErr = $emailErr = $genderErr = $websiteErr = "";
+         $name = $email = $gender = $comment = $website = "";
+         
+         if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["name"])) {
+               $nameErr = "Name is required";
+            }else {
+               $name = test_input($_POST["name"]);
+            }
+            
+            if (empty($_POST["email"])) {
+               $emailErr = "Email is required";
+            }else {
+               $email = test_input($_POST["email"]);
+               
+               // check if e-mail address is well-formed
+               if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                  $emailErr = "Invalid email format"; 
+               }
+            }
+            
+            if (empty($_POST["website"])) {
+               $website = "";
+            }else {
+               $website = test_input($_POST["website"]);
+            }
+            
+            if (empty($_POST["comment"])) {
+               $comment = "";
+            }else {
+               $comment = test_input($_POST["comment"]);
+            }
+            
+            if (empty($_POST["gender"])) {
+               $genderErr = "Gender is required";
+            }else {
+               $gender = test_input($_POST["gender"]);
+            }
+         }
+         
+         function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+         }
+      ?> -->
+
+<!-- <div layout:fragment="content" th:remove="tag" > -->
+    <!-- Start of body content specific to page -->
+    <!-- <h2>Absolute classes registration</h2>
+     
+      <p><span class = "error">* required field.</span></p>
+     
+      <form method = "post" action = "<?php 
+         echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+         <table>
+            <tr>
+               <td>Name:</td>
+               <td><input type = "text" name = "name">
+                  <span class = "error">* <?php echo $nameErr;?></span>
+               </td>
+            </tr>
+           
+            <tr>
+               <td>E-mail: </td>
+               <td><input type = "text" name = "email">
+                  <span class = "error">* <?php echo $emailErr;?></span>
+               </td>
+            </tr>
+           
+            <tr>
+               <td>Time:</td>
+               <td> <input type = "text" name = "website">
+                  <span class = "error"><?php echo $websiteErr;?></span>
+               </td>
+            </tr>
+            
+            <tr>
+               <td>Classes:</td>
+               <td> <textarea name = "comment" rows = "5" cols = "40"></textarea></td>
+            </tr>
+            
+            <tr>
+               <td>Gender:</td>
+               <td>
+                  <input type = "radio" name = "gender" value = "female">Female
+                  <input type = "radio" name = "gender" value = "male">Male
+                  <span class = "error">* <?php echo $genderErr;?></span>
+               </td>
+            </tr>
+				
+            <td>
+               <input type = "submit" name = "submit" value = "Submit"> 
+            </td>
+				
+         </table>
+			
+      </form>
+      
+      <?php
+         echo "<h2>Your given values are as:</h2>";
+         echo $name;
+         echo "<br>";
+         
+         echo $email;
+         echo "<br>";
+         
+         echo $website;
+         echo "<br>";
+         
+         echo $comment;
+         echo "<br>";
+         
+         echo $gender;
+      ?> -->
+    
+<!-- </div> -->
+</body>
+
+</html>
+
+

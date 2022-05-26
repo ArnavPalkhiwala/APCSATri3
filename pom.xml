@@ -33,6 +33,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -67,6 +68,11 @@
             <version>${org.thymeleaf-version}</version>
         </dependency>
         <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        
+        <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity4</artifactId>
             <!-- TODO Remove version once available in platform BOM -->
@@ -87,6 +93,7 @@
             <artifactId>sqlite-jdbc</artifactId>
             <version>3.30.1</version>
         </dependency>
+        
 
 
     </dependencies>
