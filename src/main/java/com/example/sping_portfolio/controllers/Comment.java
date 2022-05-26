@@ -20,13 +20,13 @@ public class Comment {
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does
     // variable bindings
     public String greeting(
-            @RequestParam(name = "username", required = false, defaultValue = "No Username given") String username,
+            @RequestParam(name = "name", required = false, defaultValue = "No Name given") String name,
             @RequestParam(name = "comment", required = false, defaultValue = "No Comment given") String comment,
             Model model) {
         // @RequestParam handles required and default values, name and model are class
         // variables, model looking like JSON
 
-        UserComment uc = new UserComment(username, comment);
+        UserComment uc = new UserComment(name, comment);
 
         uc.ChangeComment("time");
 
@@ -40,6 +40,7 @@ public class Comment {
                 model.addAttribute("dateout", uc.GetDate());
             }
         }
+
 
         model.addAttribute("luc", luc);
 
