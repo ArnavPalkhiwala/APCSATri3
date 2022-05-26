@@ -4,13 +4,13 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class UserComment {
-    public String username; // attributes
+    public String name; // attributes
     public String comment;
     public String date;
 
 
-    public UserComment(String username, String comment){ // constructor
-        this.username = username;
+    public UserComment(String name, String comment){ // constructor
+        this.name = name;
         this.comment = comment;
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
@@ -33,8 +33,8 @@ public class UserComment {
         System.out.println(comment);
     }
 
-    public String GetUsername(){
-        return username;
+    public String GetName(){
+        return name;
     }
 
     public String GetComment(){

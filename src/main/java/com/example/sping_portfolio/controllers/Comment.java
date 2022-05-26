@@ -31,20 +31,21 @@ public class Comment {
         uc.ChangeComment("time");
 
         String prevUsername = "";
-        luc.add(uc);
 
-        if (!(uc.GetUsername().equals(prevUsername))) {
-            if (!uc.username.equals("No Username given") && !uc.comment.equals("No Comment given")) {
-                model.addAttribute("nameout", uc.GetUsername());
+        if (!(uc.GetName().equals(prevUsername))) {
+            if (!uc.name.equals("No Username given") && !uc.comment.equals("No Comment given")) {
+                luc.add(uc);
+                model.addAttribute("nameout", uc.GetName());
                 model.addAttribute("commentout", uc.GetComment());
                 model.addAttribute("dateout", uc.GetDate());
-                model.addAttribute("luc", luc);
-
             }
         }
 
+        model.addAttribute("luc", luc);
 
-        prevUsername = uc.GetUsername();
+
+
+        prevUsername = uc.GetName();
 
         return "comment";
     }
