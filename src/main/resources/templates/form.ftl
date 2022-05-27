@@ -16,13 +16,34 @@
     </script>
     <#--  <#include "css/test.css">  -->
     <style type="text/css">
-body{background-color:#C5C5C0;}
-*{font-family:Tahoma, Verdana, Helvetica, sans-serif;}
+    @import url(//db.onlinewebfonts.com/c/6a9c6944fe8451dd397fe9d0763a4c88?family=OCR+A+Std);
 
 body{
-    background-color: red;
+    background-color:#C5C5C0;
+    font-family: 'OCR A Std';
 }
 
+
+body{
+    background-color: #2a2a2a;
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+h2 {
+    color: white;
+}
+h3 {
+    color: white;
+}
+h4 {
+    color: white;
+}
+h5 {
+    color: white;
+}
 a{
     font-family: 'OCR A Std', monospace;
 }
@@ -33,23 +54,34 @@ li{
 
 nav{
     font-family: 'OCR A Std', monospace;
-    background-color: pink;
+    background-color: orange;
 }
+
+a{
+    font-family: 'OCR A Std', monospace;
+}
+
+li{
+    font-family: 'OCR A Std', monospace;
+}
+
+
+
 </style>
     <#--  <link rel="stylesheet" href="/css/style.css">  -->
     <script>
         console.log("test");
     </script>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: pink;" th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: orange;" th:fragment="header">
         <a class="navbar-brand" href="/index">
-            <img src="/static/images/c4klogo.png" th:src="@{/images/c4klogo.png}" width="50" height="50" class="d-inline-block align-center" alt="">
+            <img src="src/main/resources/static/images/c4klogo.png" th:src="@{src/main/resources/static/images/c4klogo.png}" width="50" height="50" class="d-inline-block align-center" alt="">
             Coding4Kidz
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Bootstrap menus -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: right; color: pink;">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: right; color: orange;">
             <ul class="navbar-nav mr-auto">
                 <!--root menu -->
                 <li class="nav-item active">
@@ -98,7 +130,8 @@ nav{
 <div style="text-align:center" layout:fragment="content" th:remove="tag" >
     <!-- Start of body content specific to page -->
     <h2>Contact Form</h2>
-    <h4>This form will send us an email at codingkids20@gmail.com</h4>
+    <h4>This form will send us an email at codingkids20@gmail.com.</h4>
+    <br>
 
         <@spring.bind "user"/>
         <#if user?? && noErrors??>
