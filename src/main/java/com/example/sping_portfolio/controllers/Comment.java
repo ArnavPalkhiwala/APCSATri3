@@ -20,31 +20,33 @@ public class Comment {
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does
     // variable bindings
     public String greeting(
-            @RequestParam(name = "username", required = false, defaultValue = "No Username given") String username,
+            @RequestParam(name = "name", required = false, defaultValue = "No Name given") String name,
             @RequestParam(name = "comment", required = false, defaultValue = "No Comment given") String comment,
             Model model) {
         // @RequestParam handles required and default values, name and model are class
         // variables, model looking like JSON
 
-        UserComment uc = new UserComment(username, comment);
+        UserComment uc = new UserComment(name, comment);
 
         uc.ChangeComment("time");
 
         String prevUsername = "";
-        luc.add(uc);
 
-        if (!(uc.GetUsername().equals(prevUsername))) {
-            if (!uc.username.equals("No Username given") && !uc.comment.equals("No Comment given")) {
-                model.addAttribute("nameout", uc.GetUsername());
+        if (!(uc.GetName().equals(prevUsername))) {
+            if (!uc.name.equals("No Username given") && !uc.comment.equals("No Comment given")) {
+                luc.add(uc);
+                model.addAttribute("nameout", uc.GetName());
                 model.addAttribute("commentout", uc.GetComment());
                 model.addAttribute("dateout", uc.GetDate());
-                model.addAttribute("luc", luc);
-
             }
         }
 
 
-        prevUsername = uc.GetUsername();
+        model.addAttribute("luc", luc);
+
+
+
+        prevUsername = uc.GetName();
 
         return "comment";
     }

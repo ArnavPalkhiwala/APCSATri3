@@ -20,23 +20,23 @@
     <div class="row justify-content-left">
       <form action="/comment" method="GET" id="greetForm">
         <div>
-          <label for="greetField">Username</label>
-          <input name="username" id="greetField">
+          <label for="greetField">Name</label>
+          <input name="name" id="greetField">
           <div></div>
           <label for="greetField1">Feedback</label>
           <input name="comment" id="greetField1">
-          <button onclick="myFunction()" >CLICK ME</button>
-          <script>
-            function myFunction() {
-              window.location.href="http://localhost:8080/comment";  
-            }
+          <button id="myButton" onclick="myFunction();" >CLICK ME</button>
+          <script type="text/javascript">
+            document.getElementById("myButton").onclick = function () {
+              location.href = "http://localhost:8080/comment";
+            };
           </script>
 
 
           <table class="table">
             <thead>
             <tr>
-              <th>User Name</th>
+              <th>Name</th>
               <th>Date</th>
               <th>Feedback</th>
             </tr>
@@ -44,7 +44,7 @@
             <tbody>
             <tr th:each="x: ${luc}">
               <td>
-                <p th:text="@{${x.GetUsername()}}"></p>
+                <p th:text="@{${x.GetName()}}"></p>
               </td>
               <td>
                 <p th:text="@{${x.GetDate()}}"></p>
