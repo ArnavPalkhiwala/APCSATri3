@@ -34,14 +34,14 @@ public class SESService implements SendingMailService {
             Session session = Session.getDefaultInstance(props);
 
             MimeMessage msg = new MimeMessage(session);
-            msg.setFrom(new InternetAddress("meme.aman.io@gmail.com", "no-reply"));
+            msg.setFrom(new InternetAddress("no-reply@gmail.com", "no-reply"));
             //System.out.println("From: " + mailProperties.getFrom());
-            msg.setRecipient(Message.RecipientType.TO, new InternetAddress("manmang31@gmail.com"));
+            msg.setRecipient(Message.RecipientType.TO, new InternetAddress("codingkids20@gmail.com"));
             msg.setSubject(subject);
             msg.setContent(body, "text/html");
 
             Transport transport = session.getTransport();
-            transport.connect("smtp.gmail.com", "manmang31", "potter0731");
+            transport.connect("smtp.gmail.com", "codingkids20@gmail.com", "Coding123!");
             transport.sendMessage(msg, msg.getAllRecipients());
             return true;
         } catch (Exception ex) {
