@@ -38,13 +38,36 @@
                         <tr><td><input style="color: black;" type="email" id='username' name="username" size="20" required></td></tr>
                         <tr><th><label for="password">Password</label></th></tr>
                         <tr><td><input type="password" id="password" name="password" size="20" required></td></tr>
-                        <tr><th><input type="submit" value="Log In!"></th></tr>
+                        <tr><th><input type="submit" value="Log In!" onclick="changelogin();"></th></tr>
                         <tr><td><a th:href="@{/signup}">No Account? Sign Up Here!</a></td></tr>
+                        <tr id="eventResult"></tr>
 
                     </table>
                 </form>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            // const axios = require('axios');
+            function changelogin() {
+                console.log("TESTING");
+                let username = document.getElementById("username").value;
+                let password = document.getElementById("password").value;
+
+                console.log(username);
+
+                axios({
+                    url: "/loginAPI?username=" + username + "&password=" + password,
+                    method: "GET"
+                }).then(resp => {
+                    console.log(resp.data)
+                    document.getElementById("eventResult").innerText = resp.data;
+                })
+
+            }
+        </script>
 
     </div>
 </div></body>
