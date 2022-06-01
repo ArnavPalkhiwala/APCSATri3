@@ -1,65 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Stay Updated About the club!</title>
-</head>
-<body>
-  <form action="action_page.php">
-    <div class="container">
-      <h2>Subscribe to our Coding4Kidz Newsletter</h2>
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
 
-    </div>
+<head><div layout:fragment="metadata" th:remove="tag">
+  <title>Coding4Kidz</title>
+  <link rel="icon" type="image/x-icon" href="/images/c4klogo.png">
+  <link rel="stylesheet" href="/css/style.css">
 
-    <div class="container" style="background-color:white">
-      <input type="text" placeholder="Name" name="name" required>
-      <input type="text" placeholder="Email address" name="mail" required>
-      <label>
-        <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-      </label>
-    </div>
+</div></head>
 
-    <div class="container">
-      <input type="submit" value="Subscribe">
-    </div>
-  </form>
-</body>
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body><div layout:fragment="content" th:remove="tag">
+  <div class= 'container'>
+    <form action="action_page.php">
+      <div class="container">
+        <h2>Subscribe to our Coding4Kidz Newsletter</h2>
 
-<style>
-  form {
-    border: 4px solid #f1f1f1;
-  }
+      </div>
 
-  /* Add some padding and a grey background color to containers */
-  .container {
-    padding: 20px;
-    background-color: #f1f1f1;
-  }
+      <div class="container" style="background-color:white">
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="Email address" name="mail" required>
+        <label>
+          <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+        </label>
+      </div>
 
-  /* Style the input elements and the submit button */
-  input[type=text], input[type=submit] {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
+      <div class="container">
+        <input type="submit" value="Subscribe">
+      </div>
+    </form>
+  <div class="overlay"></div>
 
-  /* Add margins to the checkbox */
-  input[type=checkbox] {
-    margin-top: 16px;
-  }
+  <style>
+    form {
+      border: 4px solid #f1f1f1;
+    }
 
-  /* Style the submit button */
-  input[type=submit] {
-    background-color: #04AA6D;
-    color: white;
-    border: none;
-  }
+    /* Add some padding and a grey background color to containers */
+    .container {
+      padding: 20px;
+      background-color: #f1f1f1;
+    }
 
-  input[type=submit]:hover {
-    opacity: 0.8;
-  }
-</style>
+    /* Style the input elements and the submit button */
+    input[type=text], input[type=submit] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    /* Add margins to the checkbox */
+    input[type=checkbox] {
+      margin-top: 16px;
+    }
+
+    /* Style the submit button */
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      border: none;
+    }
+
+    input[type=submit]:hover {
+      opacity: 0.8;
+    }
+  </style>
+</div></body>
+
 </html>
