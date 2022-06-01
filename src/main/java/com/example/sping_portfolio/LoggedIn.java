@@ -15,6 +15,10 @@ public class LoggedIn {
         isLoggedIn = !isLoggedIn;
     }
 
+    public void setLogOut() {
+        isLoggedIn = false;
+    }
+
     public boolean getIsLoggedIn() {
         return isLoggedIn;
     }
@@ -36,6 +40,17 @@ public class LoggedIn {
         //  return "redirect:/newtest";
         return "false";
     }
+
+    @GetMapping("/logoutAPI")
+    @ResponseBody
+    public String logOutUser(@RequestParam(name = "click", required = false, defaultValue = "") String click) throws IOException {
+        if (click.contains("k")) {
+            thisLogIn.setLogOut();
+        }
+        //  return "redirect:/newtest";
+        return "false";
+    }
+    
 
 }
 

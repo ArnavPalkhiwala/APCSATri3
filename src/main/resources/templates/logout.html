@@ -1,0 +1,59 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Logout</title>
+    <link rel="icon" type="image/x-icon" href="/images/c4klogo.png">
+    <link rel="stylesheet" href="/css/style.css">
+
+</div></head>
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body><div layout:fragment="content" th:remove="tag">
+    <div class= 'container'>
+        <div class="container_content">
+            <div class="container_content_inner">
+                <div class="title">
+                    <h1>Logout</h1>
+                </div>
+                <div class="par">
+                    <p>
+                        Click the below button to log out. 
+                    </p>
+                </div>
+                <a href="index">
+                <div class="btns">
+                    <button class='btns_more' onclick="logout();"> Log Out! </button>
+                </div>
+                </a>
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        function logout(){
+            axios({
+                    url: "/logoutAPI?click=clicked",
+                    method: "GET"
+                }).then(resp => {
+                    console.log("Got Here")
+                    let ass = resp.data;
+                    // document.getElementById("eventResult").innerText = resp.data;
+                    console.log(ass + " ");
+                    window.location.href="/index";
+                
+
+            
+                })
+        }
+    </script>
+
+</div></body>
+
+</html>
