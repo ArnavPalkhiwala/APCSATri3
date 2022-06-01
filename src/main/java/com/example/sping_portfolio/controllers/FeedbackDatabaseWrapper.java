@@ -1,6 +1,9 @@
 package com.example.sping_portfolio.controllers;
 
 import java.io.*;
+import java.util.List;
+
+
 
 public class FeedbackDatabaseWrapper {
     public FeedbackDatabase udb = new FeedbackDatabase();
@@ -13,6 +16,11 @@ public class FeedbackDatabaseWrapper {
 
     public void writeFile() {
         try {
+//            List<Feedback> l2;
+//            for(int i = feedbacklist.size()-1; i<=0; i--){
+//                l2.add(feedbacklist.get(i));;
+//            }
+
             FileOutputStream fileOut =
                     new FileOutputStream("database/feedback.ser");
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
