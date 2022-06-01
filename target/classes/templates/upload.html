@@ -1,0 +1,60 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Uploads</title>
+      
+    <link rel="stylesheet" href="/css/style.css">
+
+</div></head>
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body style="background-color: #b5b5b5;"><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+        <h2>Content Upload</h2>
+        <hr>
+        <!--Notes input form, textarea supports multiple lines of input  -->
+        <form id="upload" enctype="multipart/form-data" th:action="@{/index}" method = "POST">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th><label for="filename">Upload a new file:</label></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="file" id="filename" name="filename" /></td>
+                    <td><input type="submit" value="Upload" ></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+        <hr>
+        <!-- Add something to show what user has uploaded-->
+        <!-- <div class="table-responsive">
+            <table class="table">
+                <tbody>
+                <tr th:each="i : ${#numbers.sequence(files.size() - 1, 0, -1)}"
+                    th:with="file=${files[i]}">
+                    <td><image th:src="@{__${file.file}__}" width="150px"></image></td>
+                    <td><span th:text="${file.file}"></span></td>
+                    <td><span th:text="${file.type}"></span></td>
+                    <td><span th:text="${file.size}"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div> -->
+    <!-- End of body content specific to page -->
+</div></body>
+
+</html>
+
+
+
+
+
+
+
