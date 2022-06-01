@@ -15,11 +15,19 @@ public class FeedbackDatabase implements java.io.Serializable {
         Feedback e = new Feedback();
         e.name = name;
         e.content = content;
-
+/*
         Date date = Calendar.getInstance().getTime();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
         String strDate = dateFormat.format(date);
         e.date = strDate;
+        return addFeedback(e);
+
+ */
+
+        final String DATE_FORMAT_NOW = "yyyy-MM-dd HH:mm:ss";
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT_NOW);
+        e.date =  sdf.format(cal.getTime());
         return addFeedback(e);
     }
 
