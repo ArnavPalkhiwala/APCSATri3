@@ -1,0 +1,57 @@
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <title>Placement Test - Coding4Kidz</title>
+    <link rel="icon" type="image/x-icon" href="/images/c4klogo.png">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+</div></head>
+
+<!-- layout::fragment="content" is heart of ThymeLeaf layout -->
+<body style="background-color: orange;"><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <br/>
+    <h1>Take This Test if You are New and Want to Find Your Best Class Fit</h1>
+    <div id="spring_intro" class="articles" style="margin: 30px; text-align: center; padding-bottom: 100px; ">
+        
+        <style>
+            label {
+                color: white;
+            }
+        </style>
+        <form id="placementtest">
+            <label>What grade are you in?</label><br>
+            <input type="radio" id="q1c1" name="q1" value="1">
+            <label for="q1c1">K-5</label><br>
+            <input type="radio" id="q1c2" name="q1" value="3">
+            <label for="q1c2">6-8</label><br>
+            <input type="radio" id="q1c3" name="q1" value="5">
+            <label for="q1c3">9-12</label><br>
+        
+        <br>
+    
+            <label>How much experience do you have with coding?</label><br>
+            <input type="radio" id="q2c1" name="q2" value="0">
+            <label for="q2c1">None</label><br>
+            <input type="radio" id="q2c2" name="q2" value="3">
+            <label for="q2c2">Minimal</label><br>
+            <input type="radio" id="q2c3" name="q2" value="5">
+            <label for="q2c3">Solid</label><br><br>
+            <input type="submit">
+        </form>
+    </div>
+    <!-- End of body content specific to page -->
+</div></body>
+
+<style>
+    body{
+        background-color: orange;
+    }
+</style>
+
+</html>
