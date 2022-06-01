@@ -22,21 +22,19 @@ public class LoggedIn {
     public static LoggedIn thisLogIn = new LoggedIn();
 
     @GetMapping("/loginAPI")
-    //@ResponseBody
+    @ResponseBody
     public String logInUser(@RequestParam(name = "username", required = false, defaultValue = "") String username,
                             @RequestParam(name = "password", required = false, defaultValue = "") String password) throws IOException {
-
         if (username.equals("admin@example.com")) {
             if (password.equals("Password123!")) {
                 System.out.println("IOUSYDUVBIDN");
                 thisLogIn.changeLogIn();
-                return "redirect:/index";
+                return "true";
                 //return "redirect:/newtest";
             }
         }
-
         //  return "redirect:/newtest";
-        return "redirect:/loginerror";
+        return "false";
     }
 
 }

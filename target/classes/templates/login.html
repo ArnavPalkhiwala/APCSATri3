@@ -63,8 +63,22 @@
                     method: "GET"
                 }).then(resp => {
                     console.log("Got Here")
+                    let ass = resp.data;
                     // document.getElementById("eventResult").innerText = resp.data;
-                    window.location.href="/index";
+                    console.log(ass + " ");
+                    if ((ass) == true) {
+                        console.log("it was true");
+                        window.location.href="/index";
+                        console.log("it was true");
+
+                    } else {
+                        console.log("it was false");
+                        window.location.href="/loginerror";
+                        console.log("it was false");
+
+                    }
+
+            
                 })
 
             }
