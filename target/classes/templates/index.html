@@ -30,10 +30,20 @@
                 </a>
             </div>
         </div>
-        <div class="container_outer_img">
-            <div class="img-inner">
-                <img src='https://www.raisesmartkid.com/wp-content/uploads/kids-learning-programming.jpg'  alt="" class="container_img"/>
+<!--        <div class="container_outer_img">-->
+<!--            <div class="img-inner">-->
+<!--                <img src='https://www.raisesmartkid.com/wp-content/uploads/kids-learning-programming.jpg'  alt="" class="container_img"/>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="slider">
+            <div class="img-box" style="text-align: center;">
+                <img src="/images/img1.png" style="width: 70%; height: 70%;" class="slider-img">
             </div>
+        <div class="buttons" style="text-align: center;">
+            <button class="btn" onclick="prev();">Prev</button>
+            <button class="btn" onclick="next();">Next</button>
+        </div>
         </div>
     </div>
     <div class="overlay"></div>
@@ -170,7 +180,54 @@
 
     }
 
+    .slider{
+        margin:50px auto;
+        width:50%;
+    }
+
+    .img-box img{
+        width:100%;
+    }
+
+    .btn{
+        border:none;
+        outline:none;
+        background:#888;
+        padding:10px 30px;
+        font-size: 20px;
+        color:#ddd;
+        cursor: pointer;
+        margin:10px auto;
+    }
+
+    .btn:hover{
+        background: #111;
+    }
+
 </style>
+
+    <script>
+        var slider_img = document.querySelector('.slider-img');
+        var images = ['img1.png', 'img2.png'];
+        var i = 0;
+
+        function prev(){
+            if(i <= 0) i = images.length;
+            i--;
+            return setImg();
+        }
+
+        function next(){
+            if(i >= images.length-1) i = -1;
+            i++;
+            return setImg();
+        }
+
+        function setImg(){
+            return slider_img.setAttribute("src", "/images/"+images[i]);
+        }
+
+    </script>
 </div></body>
 
 </html>
