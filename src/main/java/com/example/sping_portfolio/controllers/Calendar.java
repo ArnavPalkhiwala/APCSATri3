@@ -16,7 +16,7 @@ public class Calendar {
         if (LoggedIn.thisLogIn.getIsLoggedIn()) {
             return "calendar";
         } else {
-            return "login-error";
+            return "loginerror";
         }
         
     }

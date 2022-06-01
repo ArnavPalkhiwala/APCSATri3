@@ -62,8 +62,9 @@
                     url: "/loginAPI?username=" + username + "&password=" + password,
                     method: "GET"
                 }).then(resp => {
-                    console.log(resp.data)
-                    document.getElementById("eventResult").innerText = resp.data;
+                    console.log("Got Here")
+                    // document.getElementById("eventResult").innerText = resp.data;
+                    window.location.href="/index";
                 })
 
             }
