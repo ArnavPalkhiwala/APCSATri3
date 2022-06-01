@@ -1,12 +1,17 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html xmlns:th="http://www.thymeleaf.org" >
-<head>
+<!-- This page is illustrative and contains ideas about HTML formatting -->
+<!DOCTYPE HTML>
+<!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+
+<head><div layout:fragment="metadata" th:remove="tag">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Registration page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-</head>
-<body>
+</div></head>
+<body><div layout:fragment="content" th:remove="tag">
 <div align="center" class="col-md-12">
     <h2>Welcome to Student registration page</h2>
     <div class="col-md-6">
@@ -41,8 +46,8 @@
                 <p class="alert alert-danger" th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}" />
             </div>
 
-            <div class="form-group">
-                <a href="index" type="submit" class="btn btn-primary" onclick="run()">Submit</a>
+            <div class="form-group" style="text-align: center;">
+                <a href="index" type="submit" onclick="run()" style="text-align: center;">Submit</a>
             </div>
 
             <script>
@@ -52,6 +57,7 @@
             </script>
         </form>
     </div>
+</div>
 </div>
 </body>
 </html>
