@@ -33,7 +33,7 @@ public class FeedbackDatabase implements java.io.Serializable {
 
     public boolean addFeedback(Feedback u) {
         if(!u.name.isEmpty() && !u.content.isEmpty()) {
-            feedbacklist.add(u);
+            feedbacklist.add(0, u);
             return true;
         } else {
             return false;
