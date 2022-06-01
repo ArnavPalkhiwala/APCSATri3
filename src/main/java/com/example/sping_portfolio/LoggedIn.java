@@ -25,7 +25,7 @@ public class LoggedIn {
     @ResponseBody
     public String logInUser(@RequestParam(name = "username", required = false, defaultValue = "") String username,
                             @RequestParam(name = "password", required = false, defaultValue = "") String password) throws IOException {
-        if (username.equals("admin@example.com")) {
+        if (username.contains("k")) {
             if (password.equals("Password123!")) {
                 System.out.println("IOUSYDUVBIDN");
                 thisLogIn.changeLogIn();
