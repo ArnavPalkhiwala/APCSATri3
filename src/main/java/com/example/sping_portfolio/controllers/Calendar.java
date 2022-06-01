@@ -12,12 +12,7 @@ import com.example.sping_portfolio.LoggedIn;
 public class Calendar {
     @GetMapping("/calendar")
     public String CalendarPage() {
-        System.out.println(LoggedIn.thisLogIn.getIsLoggedIn());
-        if (LoggedIn.thisLogIn.getIsLoggedIn()) {
-            return "calendar";
-        } else {
-            return "login-error";
-        }
+        return "calendar";
         
     }
 }

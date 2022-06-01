@@ -2,10 +2,12 @@ package com.example.sping_portfolio;
 
 import java.io.IOException;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+@Controller
 public class LoggedIn {
     public static boolean isLoggedIn = false;
 
@@ -23,15 +25,16 @@ public class LoggedIn {
     @ResponseBody
     public String logInUser(@RequestParam(name = "username", required = false, defaultValue = "") String username,
                             @RequestParam(name = "password", required = false, defaultValue = "") String password) throws IOException {
-
-        if (username.equals("admin@example.com")) {
+        if (username.contains("k")) {
             if (password.equals("Password123!")) {
+                System.out.println("IOUSYDUVBIDN");
                 thisLogIn.changeLogIn();
-                return "Success!";
+                return "true";
+                //return "redirect:/newtest";
             }
         }
-
-        return "Login Failure";
+        //  return "redirect:/newtest";
+        return "false";
     }
 
 }
