@@ -14,39 +14,27 @@ import java.util.List;
 
 @Controller // HTTP requests are handled as a controller, using the @Controller annotation
 public class Comment {
-    List<UserComment> luc = new ArrayList<>();
+    //List<UserComment> luc = new ArrayList<>();
+    FeedbackDatabaseWrapper fdw = new FeedbackDatabaseWrapper();
 
     @GetMapping("/comment")
     // CONTROLLER handles GET request for /greeting, maps it to greeting() and does
     // variable bindings
     public String greeting(
-            @RequestParam(name = "name", required = false, defaultValue = "No Name given") String name,
-            @RequestParam(name = "comment", required = false, defaultValue = "No Comment given") String comment,
+            @RequestParam(name = "name", required = true, defaultValue = "") String name,
+            @RequestParam(name = "comment", required = true, defaultValue = "") String comment,
             Model model) {
         // @RequestParam handles required and default values, name and model are class
         // variables, model looking like JSON
 
-        UserComment uc = new UserComment(name, comment);
+        //uc.ChangeComment("time");
+        //String prevUsername = "";
 
-        uc.ChangeComment("time");
-
-        String prevUsername = "";
-
-        if (!(uc.GetName().equals(prevUsername))) {
-            if (!uc.name.equals("No Username given") && !uc.comment.equals("No Comment given")) {
-                luc.add(uc);
-                model.addAttribute("nameout", uc.GetName());
-                model.addAttribute("commentout", uc.GetComment());
-                model.addAttribute("dateout", uc.GetDate());
-            }
+        if(fdw.udb.createFeedback (name, comment)) {
+            fdw.writeFile();
         }
 
-
-        model.addAttribute("luc", luc);
-
-
-
-        prevUsername = uc.GetName();
+        model.addAttribute("luc", fdw.udb.feedbacklist);
 
         return "comment";
     }
