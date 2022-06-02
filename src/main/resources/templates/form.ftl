@@ -3,10 +3,9 @@
 <!-- This page is illustrative and contains ideas about HTML formatting -->
 <!DOCTYPE HTML>
 <!-- Signals to the Layout Dialect which layout should be used to decorate this View -->
-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
-      layout:decorate="~{layout}" lang="en">
+<html>
 
-<head><div layout:fragment="metadata" th:remove="tag">
+<head>
     <script>
         console.log("test");
     </script>
@@ -72,57 +71,57 @@ li{
     <script>
         console.log("test");
     </script>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: orange;" th:fragment="header">
-        <a class="navbar-brand" href="/index">
-            <img src="src/main/resources/static/images/c4klogo.png" th:src="@{src/main/resources/static/images/c4klogo.png}" width="50" height="50" class="d-inline-block align-center" alt="">
-            Coding4Kidz
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Bootstrap menus -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: right; color: orange;">
-            <ul class="navbar-nav mr-auto">
-                <!--root menu -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="/calendar">Calendar <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/videos">Videos<span class="sr-only">(current)</span></a>
-                </li>
-                <!-- <li class="nav-item active">
-                    <a class="nav-link" href="/contact">Contact <span class="sr-only">(current)</span></a>
-                </li> -->
-                <li class="nav-item active">
-                    <a class="nav-link" href="/comment">Feedback Form <span class="sr-only">(current)</span></a>
-                <li class="nav-item active">
-                <li class="nav-item active">
-                    <a class="nav-link" href="https://arnavpalkhiwala.github.io/APCSATri3/" target="_blank">Documentation <span class="sr-only">(current)</span></a>
-                <li class="nav-item active">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/form">Contact Form<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>
-                </li>
+<#--&lt;#&ndash;    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: orange;" th:fragment="header">&ndash;&gt;-->
+<#--        <a class="navbar-brand" href="/index">-->
+<#--            <img src="src/main/resources/static/images/c4klogo.png" th:src="@{src/main/resources/static/images/c4klogo.png}" width="50" height="50" class="d-inline-block align-center" alt="">-->
+<#--            Coding4Kidz-->
+<#--        </a>-->
+<#--        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<#--            <span class="navbar-toggler-icon"></span>-->
+<#--        </button>-->
+<#--        <!-- Bootstrap menus &ndash;&gt;-->
+<#--        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: right; color: orange;">-->
+<#--            <ul >-->
+<#--                <!--root menu &ndash;&gt;-->
+<#--                <li class="nav-item active">-->
+<#--                    <a class="nav-link" href="/calendar">Calendar <span class="sr-only">(current)</span></a>-->
+<#--                </li>-->
+<#--                <li class="nav-item active">-->
+<#--                    <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>-->
+<#--                </li>-->
+<#--                <li class="nav-item active">-->
+<#--                    <a class="nav-link" href="/videos">Videos<span class="sr-only">(current)</span></a>-->
+<#--                </li>-->
+<#--                <!-- <li class="nav-item active">-->
+<#--                    <a class="nav-link" href="/contact">Contact <span class="sr-only">(current)</span></a>-->
+<#--                </li> &ndash;&gt;-->
+<#--                <li class="nav-item active">-->
+<#--                    <a class="nav-link" href="/comment">Feedback Form <span class="sr-only">(current)</span></a>-->
+<#--                <li class="nav-item active">-->
+<#--                <li class="nav-item active">-->
+<#--                    <a class="nav-link" href="https://arnavpalkhiwala.github.io/APCSATri3/" target="_blank">Documentation <span class="sr-only">(current)</span></a>-->
+<#--                <li class="nav-item active">-->
+<#--                <li class="nav-item active">-->
+<#--                    <a class="nav-link" href="/form">Contact Form<span class="sr-only">(current)</span></a>-->
+<#--                </li>-->
+<#--                <li class="nav-item active">-->
+<#--                    <a class="nav-link" href="/about">About<span class="sr-only">(current)</span></a>-->
+<#--                </li>-->
 
 
-                
-            </ul>
- 
-            <script>
-               
-            </script>
+<#--                -->
+<#--            </ul>-->
+<#-- -->
+<#--            <script>-->
+<#--               -->
+<#--            </script>-->
 
-        </div>
-    </nav>
+<#--        </div>-->
+<#--    </nav>-->
     <#--  <link rel="stylesheet" href="/css/nav.css">  -->
     <#--  <h2>test</h2>  -->
 
-</div></head>
+</head>
 
 <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
 <body>
@@ -157,6 +156,9 @@ li{
             </form>
         </#if>
 
+        <br>
+
+        <a style="color: white;" href="index">Return Home!</a>
         <#--  <script src="/js/main.js"></script>  -->
 
     <!-- End of body content specific to page -->
