@@ -42,9 +42,12 @@
             <label for="q2c2">Minimal</label><br>
             <input type="radio" id="q2c3" name="q2" value="5">
             <label for="q2c3">Solid</label><br><br>
-            <button type="submit" onclick="run()"> Submit </button>
-            <br>
+            <button style="background-color: white; color: black; font-weight: bold; size: 25px; cursor: pointer; border-radius: 50%; padding: .5%;  " ype="submit" onclick="run()"> Submit </button>
+            </br>
+            </br>
+            <label id="results">Suggested Class: </label>
 
+        </form>
             <script>
                 function run(){
                     var ele = document.getElementsByName('q1');
@@ -62,20 +65,28 @@
                     }
 
                     if(total == 155 || total == 135 || total == 153 ){
+                        document.getElementById('results').innerHTML = 'Suggested Class: Java';
                         alert("Your student should take Java!");
 
                     }
 
                     else if(total == 133 || total == 115 ||total == 150){
                         alert("Your student should take Python!");
+                        document.getElementById("results").innerHTML = 'Suggested Class: Python';
+
                     }
 
+                    else if(total <= 99){
+                        alert("Check your answers");
+                    }
                     else{
                         alert("Your student should take Scratch!");
+                        document.getElementById("results").innerHTML = 'Suggested Class: Scratch';
+
                     }
+
                 }
             </script>
-        </form>
     </div>
     <!-- End of body content specific to page -->
 </div></body>
