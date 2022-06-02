@@ -1,17 +1,21 @@
 # Actions Within Site
 
-* This website will contain a calendar with dates for teaching sessions so people can easily schedule their students and see if they are available
+* This website contains a calendar with dates for teaching sessions and meetings so people can easily schedule their students and see if they are available
 
-* There will also be small coding tutorials/youtube videos to clarify content in class and serve as a way for absent students to catch up on any material they missed 
+* There is a login (and logout) page to sign users into the website and view select content.
 
-* Lastly, we plan to institute contact and sign-up forms that allow parents to easily register for classes
+* People can sign up on the registration page and enroll in courses.
+
+* There is a videos page, which has old videos from Coding4kidz lessons, which can only be viewed after logging in.
+
+* There is a feedback form which uses a database to store old comments (essentially like a blog).
+
+* There is also a contact page which uses Spring API and Google mail API to send emails directly to codingids20@gmail.com.
 
 * Databases will allow for us to keep track of everyone who has signed up for the class and make it easy to use and understand for everyone 
 
-Ideas:
+* Unsure uses can use the Placement Test to determine which class is the best fit for them.
 
-<img width="319" alt="Screen Shot 2022-03-25 at 9 29 37 AM" src="https://user-images.githubusercontent.com/25650329/160161893-0e201507-dba9-4f4d-ba61-0eae3ed54a70.png">
-
-<img width="313" alt="Screen Shot 2022-03-25 at 9 29 53 AM" src="https://user-images.githubusercontent.com/25650329/160161939-978dbf18-ae52-4fc0-8cae-6fba74f2e784.png">
+* The about page gives an overview of the website, and also links users to the ad to see more.
 
 
