@@ -18,7 +18,7 @@
     <br/>
     <h1>Take This Test if You are New and Want to Find Your Best Class Fit</h1>
     <div id="spring_intro" class="articles" style="margin: 30px; text-align: center; padding-bottom: 100px; ">
-        
+
         <style>
             label {
                 color: white;
@@ -32,9 +32,9 @@
             <label for="q1c2">6-8</label><br>
             <input type="radio" id="q1c3" name="q1" value="5">
             <label for="q1c3">9-12</label><br>
-        
+
         <br>
-    
+
             <label>How much experience do you have with coding?</label><br>
             <input type="radio" id="q2c1" name="q2" value="0">
             <label for="q2c1">None</label><br>
@@ -42,7 +42,39 @@
             <label for="q2c2">Minimal</label><br>
             <input type="radio" id="q2c3" name="q2" value="5">
             <label for="q2c3">Solid</label><br><br>
-            <input type="submit">
+            <button type="submit" onclick="run()"> Submit </button>
+            <br>
+
+            <script>
+                function run(){
+                    var ele = document.getElementsByName('q1');
+                    var ele2 = document.getElementsByName('q2')
+                    let total = 1;
+
+                    for(i = 0; i < ele.length; i++) {
+                        if(ele[i].checked)
+                            total = total + ele[i].value;
+                    }
+
+                    for(i = 0; i < ele2.length; i++) {
+                        if(ele2[i].checked)
+                            total = total + ele2[i].value;
+                    }
+
+                    if(total == 155 || total == 135 || total == 153 ){
+                        alert("Your student should take Java!");
+
+                    }
+
+                    else if(total == 133 || total == 115 ||total == 150){
+                        alert("Your student should take Python!");
+                    }
+
+                    else{
+                        alert("Your student should take Scratch!");
+                    }
+                }
+            </script>
         </form>
     </div>
     <!-- End of body content specific to page -->
