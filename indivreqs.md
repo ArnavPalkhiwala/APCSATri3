@@ -14,5 +14,10 @@
 * Improve styling and css for each page (fix buttons, links, coloring, background, etc.)
 
 ### Chris:
+* Created an initial version of an email form which Aman later imroved
+* Created a serialized database so users can add comments and questions about the website or content
+* Made a layout for registration page for new users to join the club
+* Made a generic backend or serialized databases which can be applied to future databases.
+
 
 ### Raquib:
