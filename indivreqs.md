@@ -21,3 +21,8 @@
 
 
 ### Raquib:
+* Intialized deploym ent for our group and created a deployment plan for our group
+* Did other features such as CertBot and got licensing so I can have a secure website
+* Added it under the subdomain of nighthawkcodingsociety with the help of Mr. Mort
+* Worked on the home page layout and the animation for the homepage
+* Helped with the next picture feature animation for our website with Arnav (the photo gallery)
